@@ -10,6 +10,11 @@ require("dotenv").config();
 app.use(express.json());
 app.use(userRoutes);
 
+// Initialize Firebase Admin
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+});
+
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
