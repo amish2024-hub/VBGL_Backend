@@ -1,0 +1,4 @@
+node_modoles/
+.env
+firebaseKey.json
+npm-debug.log
