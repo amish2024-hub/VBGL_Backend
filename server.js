@@ -4,11 +4,14 @@ const userRoutes = require("./routes/userRoutes");
 const admin = require("firebase-admin");
 const serviceAccount = require("./firebaseKey.json");
 const app = express();
+const db = admin.firestore();
+
 require("dotenv").config();
 
 // middleware
 app.use(express.json());
 app.use(userRoutes);
+app.use("db", db);
 
 // Initialize Firebase Admin
 admin.initializeApp({

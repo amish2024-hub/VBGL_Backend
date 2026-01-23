@@ -4,7 +4,7 @@ const controllers = require("../controllers/userControllers");
 const auth = require("../middleware/authMiddleware");
 
 // creat
-routes.post("/users", auth, controllers.createUser);
+routes.post("/users", controllers.createUser);
 
 // read
 routes.get("/users", auth, controllers.getUsers);

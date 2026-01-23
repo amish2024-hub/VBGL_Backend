@@ -1,5 +1,6 @@
 // Import User model
 const User = require("../models/User");
+const db = require("../firebase");
 
 /*
  CREATE USER
